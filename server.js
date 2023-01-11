@@ -7,7 +7,7 @@ const express = require('express'),
 //App setup
 var app = express();
 var server = app.listen(82, function () {
-    console.log("listening to port 82.");
+    console.log("listening to port 80.");
 });
 
 if (req.session.userID != null) {
@@ -31,8 +31,8 @@ app.use(cookieParser());
 const config = {
     "host": "localhost",
     "user": "root",
-    "password": "",
-    "base": "mysql_example"
+    "password": "Password12",
+    "base": "prova"
 };
 
 var db = mysql.createConnection({
