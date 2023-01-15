@@ -1,0 +1,35 @@
+version: '3'
+services:
+  
+  mysql_db:
+    image: mysql:latest
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    restart: always
+    environment:
+      - PMA_ARBITRARY=1
+    ports:
+      - 4000:80
+
+  server-socket-io:
+    image: socket.io-server:staging
+    container_name: server-socket-io
+    volumes:
+      - ./server:/usr/src
+    command: npm start
+    ports:
+      - "3000:3000"
+  
+  client-socket-io:
+    image: socket.io-client:staging
+    container_name: client-socket-io
+    volumes:
+      - ./client:/usr/src/app
+    command: npm start
+    ports:
+      - "8080:3000"
+  
+
