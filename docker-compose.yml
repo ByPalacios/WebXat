@@ -3,11 +3,13 @@ services:
   
   mysql_db:
     image: mysql:latest
+    container_name: mysql-socket-io
     environment:
       - MYSQL_ROOT_PASSWORD=password
 
   phpmyadmin:
     image: phpmyadmin:latest
+    container_name: phpmyadmin-socket-io
     restart: always
     environment:
       - PMA_ARBITRARY=1
@@ -30,6 +32,6 @@ services:
       - ./client:/usr/src/app/client
     #command: npm start
     ports:
-      - "8080:3000"
+      - "80:3000"
   
 

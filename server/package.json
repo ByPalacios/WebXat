@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "node index.js",
-    "cp": "cd client && cp -r . ../"
+    "cp": "cd server && cp -r . ../"
   },
   "author": "tt",
   "license": "ISC",
