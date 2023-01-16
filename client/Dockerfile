@@ -1,6 +1,6 @@
 #Client
 
-FROM node:19.3.0
+FROM node:staging
 
 RUN mkdir -p /usr/src/app
 WORKDIR /home/node/app
