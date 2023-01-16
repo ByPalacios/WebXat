@@ -9,7 +9,7 @@ if system == "Windows":
     info = os.system("echo ---------------------------------------------")
     info = os.system("echo Build socket.io-server:")
     info = os.system("echo ---------------------------------------------")
-    command1 = os.system("docker load < node.tar")
+    command1 = os.system("docker load -i node.tar")
     command1 = os.system("cd server & docker build . -t socket.io-server:staging --no-cache")
     info = os.system("echo ---------------------------------------------")
     info = os.system("echo Build socket.io-client:")
