@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 #COPY package.json ./
 #COPY package-server.json ./package.json
 
-RUN npm install 
+#RUN npm install 
     #npm install express \
     #socket.io \
     #mysql \

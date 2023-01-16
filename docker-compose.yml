@@ -18,8 +18,8 @@ services:
     image: socket.io-server:staging
     container_name: server-socket-io
     volumes:
-      - ./server:/usr/src
-    command: npm start
+      - ./server:/usr/src/app/server
+    #command: npm start
     ports:
       - "3000:3000"
   
@@ -27,8 +27,8 @@ services:
     image: socket.io-client:staging
     container_name: client-socket-io
     volumes:
-      - ./client:/usr/src/app
-    command: npm start
+      - ./client:/usr/src/app/client
+    #command: npm start
     ports:
       - "8080:3000"
   
