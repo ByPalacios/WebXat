@@ -1,6 +1,6 @@
 #Server
 
-FROM node:19.3.0
+FROM node:staging
 
 RUN mkdir -p /usr/src/app
 WORKDIR /usr/src/app
