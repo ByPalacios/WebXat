@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js",
-    "cp": "cd server && cp -r . ../"
+    "start": "nodemon index.js"
   },
   "author": "tt",
   "license": "ISC",
