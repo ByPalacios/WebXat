@@ -9,4 +9,4 @@ npm install -S mysql
 npm install -S cookie-parser
 npm install -S express-session
 npm install
-nodemon index.js
+nodemon --legacy-watch index.js

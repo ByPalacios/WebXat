@@ -5,4 +5,4 @@ rm package-lock.json
 npm install -S express
 npm install -gS nodemon
 npm install
-nodemon index.js
+nodemon --legacy-watch index.js
