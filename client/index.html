@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chat privado</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+</head>
+<body>
+
+<div id="chat">
+  <form id="join-room">
+    <label>Ingresa el nombre de usuario</label>
+    <input type="text" id="username" placeholder="Nombre de usuario">
+    <label>Ingresa el nombre de la sala</label>
+    <input type="text" id="room" placeholder="Nombre de la sala">
+    <button type="submit">Unirse a la sala</button>
+  </form>
+  <form id="send-message" style="display:none;">
+    <label>Enviar mensaje a:</label>
+    <input type="text" id="receiver" placeholder="Nombre de usuario receptor">
+    <textarea id="message"></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+  <div id="messages"></div>
+</div>
+
+<script>
+  // Inicializar socket
+  const socket = io();
+
+  // Obtener elementos del DOM
+  const joinRoomForm = document.getElementById('join-room');
+  const sendMessageForm = document.getElementById('send-message');
+  const messages = document.getElementById('messages');
+  const username = document.getElementById('username');
+  const room = document.getElementById('room');
+  const message = document.getElementById('message');
+  const receiver = document.getElementById('receiver');
+
+  // Manejar evento de submit del formulario de unión a sala
+  joinRoomForm.addEventListener('submit', e => {
+    e.preventDefault();
+    socket.emit('join room', { username: username.value, room: room.value });
+    joinRoomForm.style.display = 'none';
+    sendMessageForm.style.display = 'block';
+  });
+
+  // Manejar evento de submit del formulario de envío de mensaje
+  sendMessageForm.addEventListener('submit', e => {
+    e.preventDefault();
+    socket.emit('send private message', { sender: username.value, receiver: receiver.value, message: message.value });
+    message.value = '';
+  });
+
+  // Manejar evento de nuevo mensaje privado
+  socket.on('new private message', data => {
+    messages.innerHTML += `<p><strong>${data.sender}:</strong> ${data.message}</p>`;
+  });
+</script>
+</body>
+</html>
