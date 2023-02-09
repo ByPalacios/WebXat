@@ -5,8 +5,8 @@ rm package-lock.json
 npm install -S express
 npm install -gS nodemon
 npm install -S socket.io
-npm install -S mysql
+npm install -S mysql2
 npm install -S cookie-parser
 npm install -S express-session
 npm install
-nodemon index.js
+nodemon --legacy-watch index.js
