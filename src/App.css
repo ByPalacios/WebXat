@@ -16,7 +16,7 @@
 .FormDiv {
   margin: auto;
   width: 350px;
-  height: 250px;
+  height: 300px;
   background-color: #282c34;
   margin-top: 100px;
   border-radius: 10px;
@@ -24,20 +24,28 @@
   color: white;
 }
 
-.formInput {
-  border-radius: 5px;
-  padding: 10px;
-  margin: auto;
-  width: 80%;
-  background-color: #282c34;
-  border-color: white;
-  margin-bottom: -20px;
+.formTitle {
+    padding-top: 10px;
+margin-bottom: 0px;
+margin-left: 25px;
+text-align: left;
 }
 
-.formTitles{
-    margin-top: 20px;
-    margin-bottom: 5px;
-    padding-top: 5px;
+.formInput {
+  margin-top: 10px;
+  padding: 10px;
+  width: 80%;
+  background-color: #282c34;
+  border-radius: 5px;
+  border: 1px solid white;
+  font-family: 'calibri';
+  font-size: 15px;
+}
 
+.formButton {
+    margin-top:10px;
+    padding: 3px;
+    font-family: Calibri;
+    width: 86%;
 }
 
