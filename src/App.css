@@ -19,13 +19,12 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-color: #66999;
 }
 
 .FormDiv {
   margin: auto;
   width: 350px;
-  height: 300px;
+  height: 350px;
   background-color: #282c34;
   margin-top: 15%;
   border-radius: 10px;
@@ -73,3 +72,6 @@ text-align: left;
     background: #7500C0;
 }
 
+.formCondicions {
+    margin-bottom: 0px;
+}
