@@ -13,31 +13,65 @@
   color: white;
 }
 
+body {
+    background-image: url("../images/bg-image.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 .FormDiv {
   margin: auto;
   width: 350px;
-  height: 250px;
+  height: 350px;
   background-color: #282c34;
-  margin-top: 100px;
+  margin-top: 15%;
   border-radius: 10px;
   font-family: 'calibri';
   color: white;
+  box-shadow: 7px 13px 37px #000;
+  justify-content: center;
+  align-items: center;
+}
+
+.formTitle {
+    padding-top: 10px;
+margin-bottom: 0px;
+margin-left: 25px;
+text-align: left;
 }
 
 .formInput {
-  border-radius: 5px;
+  margin-top: 10px;
   padding: 10px;
-  margin: auto;
   width: 80%;
   background-color: #282c34;
-  border-color: white;
-  margin-bottom: -20px;
-}
-
-.formTitles{
-    margin-top: 20px;
-    margin-bottom: 5px;
-    padding-top: 5px;
+  border-radius: 5px;
+  border: 1px solid white;
+  font-family: 'calibri';
+  font-size: 15px;
+  color: white;
 
 }
 
+.formButton
+ {
+    pointer: cursor;
+    margin: 16px;
+    padding: 8px;
+    font-family: Calibri;
+    width: 86%;
+    background-color: #9B00FF;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+}
+
+.formButton:hover{
+    background: #7500C0;
+}
+
+.formCondicions {
+    margin-bottom: 0px;
+}
