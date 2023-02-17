@@ -1,5 +1,17 @@
 import './App.css';
 
+const Cookies = () => {
+    return (
+            <div className="avisCookies" id={"avisCookies"}>
+                <img className={"cookieImg"} src={"../images/cookie.jpg"}></img>
+                <h3 className={"cookieTitol"}>Cookies</h3>
+                <p className={"cookieFrase"}>Utilitzme les nostres cookies i de tercers per millorar el nostre servei.</p>
+                <button className={"cookieButton"} id={"boto-acceptar-cookies"}> D'acord</button>
+                <a className={"cookieUrl"} href={"google.com"}></a>
+            </div>
+    );
+}
+
 const App = () => {
   return (
     <div className="App">
@@ -12,6 +24,7 @@ const App = () => {
           <p className={"formCondicions"}>Accepta els <a href={"google.com"}>Terminis i condicions</a></p>
         <input className={'formButton'} type={"submit"} value={'Registrar-se'}></input>
       </section>
+        <Cookies></Cookies>
     </div>
   );
 }
