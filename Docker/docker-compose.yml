@@ -1,0 +1,42 @@
+version: '3.1'
+
+services:
+  db:
+    image: mysql
+    container_name: mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: phpmyqdmin
+    restart: always
+    ports:
+      - 8000:8080
+
+  socket.io-server:
+    image: socket.io-server:staging
+    container_name: socket.io-server
+    restart: always
+    ports:
+      - 800:8080
+    volumes:
+      #- ${DIR_SERVER}:/usr/src/app
+      - ~/Documentos/Sintesi/WebApp/Server:/usr/src/app
+
+  socket.io-client:
+    image: socket.io-client:staging
+    container_name: socket.io-client
+    restart: always
+    ports:
+      - 80:8080
+    volumes:
+        #- ${DIR_CLIENT}:/usr/src/app
+        - ~/Documentos/Sintesi/WebApp/Client:/usr/src/app
+
+volumes:
+  server:
+#    external: true
+  client:
+#    external: true

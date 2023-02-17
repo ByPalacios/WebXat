@@ -1,0 +1,68 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+body {
+    background-image: url("../images/bg-image.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #66999;
+}
+
+.FormDiv {
+  margin: auto;
+  width: 350px;
+  height: 300px;
+  background-color: #282c34;
+  margin-top: 15%;
+  border-radius: 10px;
+  font-family: 'calibri';
+  color: white;
+  box-shadow: 7px 13px 37px #000;
+  justify-content: center;
+  align-items: center;
+}
+
+.formTitle {
+    padding-top: 10px;
+margin-bottom: 0px;
+margin-left: 25px;
+text-align: left;
+}
+
+.formInput {
+  margin-top: 10px;
+  padding: 10px;
+  width: 80%;
+  background-color: #282c34;
+  border-radius: 5px;
+  border: 1px solid white;
+  font-family: 'calibri';
+  font-size: 15px;
+
+}
+
+.formButton {
+    margin: 16px;
+    padding: 8px;
+    font-family: Calibri;
+    width: 86%;
+    background-color: #9B00FF;
+    color: white;
+    border: none;
+    font-size: 16px;
+}
+
