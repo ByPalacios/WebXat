@@ -2,20 +2,9 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +13,65 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+body {
+    background-image: url("../images/bg-image.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.FormDiv {
+  margin: auto;
+  width: 350px;
+  height: 350px;
+  background-color: #282c34;
+  margin-top: 15%;
+  border-radius: 10px;
+  font-family: 'calibri';
+  color: white;
+  box-shadow: 7px 13px 37px #000;
+  justify-content: center;
+  align-items: center;
+}
+
+.formTitle {
+    padding-top: 10px;
+margin-bottom: 0px;
+margin-left: 25px;
+text-align: left;
+}
+
+.formInput {
+  margin-top: 10px;
+  padding: 10px;
+  width: 80%;
+  background-color: #282c34;
+  border-radius: 5px;
+  border: 1px solid white;
+  font-family: 'calibri';
+  font-size: 15px;
+  color: white;
+
+}
+
+.formButton
+ {
+    pointer: cursor;
+    margin: 16px;
+    padding: 8px;
+    font-family: Calibri;
+    width: 86%;
+    background-color: #9B00FF;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+}
+
+.formButton:hover{
+    background: #7500C0;
+}
+
+.formCondicions {
+    margin-bottom: 0px;
 }
