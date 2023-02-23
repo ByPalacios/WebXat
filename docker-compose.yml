@@ -16,7 +16,7 @@ services:
       ME_CONFIG_MONGODB_ADMINPASSWORD: root
       ME_CONFIG_MONGODB_URL: mongodb://root:root@mongo:27017/
     ports:
-      - 3000:8081
+      - "3000:8081"
 
   server-socket-io:
     image: socket.io-server:staging
@@ -34,6 +34,6 @@ services:
       - ./client:/usr/src/app
     #command: [entrypoint.sh]
     ports:
-      - "80:3000"
+      - "8080:3000"
   
 

@@ -12,7 +12,7 @@ COPY entrypoint.sh ./
 
 #COPY package-client.json ./package.json
 
-RUN chmod -R 777 ./
+RUN chmod -R 777 ./entrypoint.sh
 #RUN rm -R node_modules 
 #RUN rm package-lock.json 
 #RUN npm install express -S \
