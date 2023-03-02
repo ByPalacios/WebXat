@@ -2,13 +2,15 @@ import './App.css';
 
 const Cookies = () => {
     return (
-            <div className="avisCookies" id={"avisCookies"}>
-                <img className={"cookieImg"} src={"../images/cookie.jpg"}></img>
-                <h3 className={"cookieTitol"}>Cookies</h3>
-                <p className={"cookieFrase"}>Utilitzme les nostres cookies i de tercers per millorar el nostre servei.</p>
-                <button className={"cookieButton"} id={"boto-acceptar-cookies"}> D'acord</button>
-                <a className={"cookieUrl"} href={"google.com"}></a>
-            </div>
+            <><div className="avis-cookies" id={"avisCookies"}>
+        <img className={"cookieImg"} src="../images/cookie.png"></img>
+        <h3 className={"cookieTitol"}>Cookies</h3>
+        <p className={"cookieFrase"}>Utilitzem les nostres cookies i de tercers per millorar el nostre servei.</p>
+        <button className={"cookieButton"} id={"boto-acceptar-cookies"}> D'acord</button>
+        <a className={"cookieUrl"} href={"google.com"}>Avís de cookies</a>
+      </div>
+      <div className={"cookiesBackground"} id={"cookiesBackground"}></div>
+      </>
     );
 }
 
